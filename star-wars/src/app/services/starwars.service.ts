@@ -2,7 +2,6 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
 import { IMovie } from '../models/IMovie';
-import { IPeople } from '../models/IPeople';
 import { IPeopleService } from '../models/IPeopleService';
 import { IPlanet } from '../models/IPlanet';
 import { IStarWars } from '../models/IStarWars';
