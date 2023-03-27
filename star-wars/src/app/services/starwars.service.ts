@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
-import { IPeople } from '../models/IPeople';
+import { IPeopleService } from '../models/IPeopleService';
 import { IStarWars } from '../models/IStarWars';
 
 @Injectable()
@@ -14,7 +14,7 @@ export class StarWarsService {
         return this.http.get<IStarWars>(this.elementApiUrl)
     }
 
-    listAllPeople(): Observable<IPeople>{
-        return this.http.get<IPeople>(this.elementApiUrl + 'people')
+    listAllPeople(): Observable<IPeopleService>{
+        return this.http.get<IPeopleService>(this.elementApiUrl + 'people')
     }
 }

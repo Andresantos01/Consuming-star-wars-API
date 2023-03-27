@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IPeople } from 'src/app/models/IPeople';
+import { IPeopleService } from 'src/app/models/IPeopleService';
 import { StarWarsService } from 'src/app/services/starwars.service';
 
 @Component({
@@ -10,12 +10,12 @@ import { StarWarsService } from 'src/app/services/starwars.service';
 })
 export class PeopleComponent implements OnInit {
   
-  dataPeople!: IPeople;
+  dataPeople!: IPeopleService;
 
   constructor(
     public starwarsService: StarWarsService
     ){
-    this.starwarsService.listAllPeople().subscribe((route: IPeople)=>{
+    this.starwarsService.listAllPeople().subscribe((route: IPeopleService)=>{
       
       this.dataPeople = route;
       console.log(this.dataPeople)
