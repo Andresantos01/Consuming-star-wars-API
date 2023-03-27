@@ -15,6 +15,7 @@ import { FilmsComponent } from './views/films/films.component';
 import { SpeciesComponent } from './views/species/species.component';
 import { VehiclesComponent } from './views/vehicles/vehicles.component';
 import { StarshipsComponent } from './views/starships/starships.component';
+import {MatTableModule} from '@angular/material/table';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +35,9 @@ import { StarshipsComponent } from './views/starships/starships.component';
     MatListModule,
     MatButtonModule,
     AppRoutingModule,
-    HttpClientModule
+    MatTableModule,
+    HttpClientModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
