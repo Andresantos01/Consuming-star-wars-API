@@ -10,23 +10,16 @@ import { StarWarsService } from 'src/app/services/starwars.service';
 })
 
 
-
 export class HomeComponent implements OnInit {
-
 
   dataStarWars!: IStarWars;
   constructor(
     public starwarsService: StarWarsService
     ){
     this.starwarsService.getRoutes().subscribe((route: IStarWars)=>{
-      
       this.dataStarWars = route;
-      console.log(this.dataStarWars)
     })
   }
 
-
-
-  ngOnInit() :void {}
-  
+  ngOnInit() :void {}  
 }
