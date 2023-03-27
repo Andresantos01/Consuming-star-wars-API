@@ -1,1 +1,53 @@
-<app-header content="PEOPLE"></app-header>
+<app-header content="STAR WARS PEOPLE"></app-header>
+<div class="demo-button-container">
+  
+  <table mat-table #table [dataSource]="dataSource" class="mat-elevation-z8 demo-table">
+    <!-- Position Column -->
+    <ng-container matColumnDef="name">
+      <th class="text-gray-100 text uppercase " mat-header-cell *matHeaderCellDef>Name</th>
+      <td class="text-cyan-400" mat-cell *matCellDef="let element">{{element.name}}</td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="height">
+      <th class="text-gray-100 text uppercase " mat-header-cell *matHeaderCellDef>height</th>
+      <td class="text-cyan-400" mat-cell *matCellDef="let element">{{element.height}}</td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="mass">
+      <th class="text-gray-100 text uppercase " mat-header-cell *matHeaderCellDef>mass</th>
+      <td class="text-cyan-400" mat-cell *matCellDef="let element">{{element.mass}}</td>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="hair_color">
+      <th class="text-gray-100 text uppercase " mat-header-cell *matHeaderCellDef>hair_color</th>
+      <td class="text-cyan-400" mat-cell *matCellDef="let element">{{element.hair_color}}</td>
+    </ng-container>
+     <!-- Actions Column -->
+
+     <ng-container matColumnDef="skin_color">
+        <th class="text-gray-100 text uppercase " mat-header-cell *matHeaderCellDef>skin_color</th>
+        <td class="text-cyan-400" mat-cell *matCellDef="let element">{{element.skin_color}}</td>
+      </ng-container>
+       <!-- Actions Column -->
+       <ng-container matColumnDef="eye_color">
+        <th class="text-gray-100 text uppercase " mat-header-cell *matHeaderCellDef>eye_color</th>
+        <td class="text-cyan-400" mat-cell *matCellDef="let element">{{element.eye_color}}</td>
+      </ng-container>
+       <!-- Actions Column -->
+       <ng-container matColumnDef="birth_year">
+        <th class="text-gray-100 text uppercase " mat-header-cell *matHeaderCellDef>birth_year</th>
+        <td class="text-cyan-400" mat-cell *matCellDef="let element">{{element.birth_year}}</td>
+      </ng-container>
+       <!-- Actions Column -->
+       <ng-container matColumnDef="gender">
+        <th class="text-gray-100 text uppercase " mat-header-cell *matHeaderCellDef>gender</th>
+        <td class="text-cyan-400" mat-cell *matCellDef="let element">{{element.gender}}</td>
+      </ng-container>
+    
+    <tr mat-header-row *matHeaderRowDef="headerColumnsPeople"></tr>
+    <tr mat-row *matRowDef="let row; columns: headerColumnsPeople;"></tr>
+  </table>
+  
