@@ -1,7 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
+import { IPeople } from '../models/IPeople';
 import { IPeopleService } from '../models/IPeopleService';
+import { IPlanet } from '../models/IPlanet';
 import { IStarWars } from '../models/IStarWars';
 
 @Injectable()
@@ -16,5 +18,9 @@ export class StarWarsService {
 
     listAllPeople(): Observable<IPeopleService>{
         return this.http.get<IPeopleService>(this.elementApiUrl + 'people')
+    }
+
+    getPlanet(planetId: Number) : Observable<IPlanet>{
+        return this.http.get<IPlanet>(this.elementApiUrl + 'planets/' + planetId)
     }
 }
