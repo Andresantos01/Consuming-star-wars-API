@@ -6,6 +6,7 @@ import {MatSort} from '@angular/material/sort';
 import {MatTable, MatTableDataSource} from '@angular/material/table';
 import { IPeople } from 'src/app/models/IPeople';
 import { IPlanet } from 'src/app/models/IPlanet';
+import { IMovie } from 'src/app/models/IMovie';
 
 
 @Component({
@@ -24,9 +25,9 @@ export class PeopleComponent implements OnInit {
   headerColumnsPeople: string[] = ['name', 'height', 'mass', 'hair_color', 'skin_color', 'eye_color', 'birth_year','gender', 'homeworld']
 
   dataPeople!: IPeopleService;
-  dataSource!: IPeople[]
+  dataSource!: IPeople[];
   planetId!: any;
-  
+  movieId!: any;
   constructor(
     public starwarsService: StarWarsService
     ){
@@ -38,15 +39,14 @@ export class PeopleComponent implements OnInit {
         for(let i = 0; i < this.dataSource.length; i++){
 
           this.planetId = this.dataSource[i].homeworld.split( "/",6)[5];
-
           this.starwarsService.getPlanet(this.planetId).subscribe((dataPlanet : IPlanet)=>{
-
             this.dataSource[i].homeworld = dataPlanet.name;
           });
+          
+
         }
         
     });
-
    
   }
 
