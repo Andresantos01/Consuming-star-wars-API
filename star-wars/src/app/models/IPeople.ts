@@ -1,3 +1,5 @@
+import { IMovie } from "./IMovie";
+
 export interface IPeople{
     name: String;
     height: Number;
@@ -8,7 +10,7 @@ export interface IPeople{
     birth_year: String;
     gender: String;
     homeworld: String;
-    films: [];
+    films: IMovie[];
     species: [];
     vehicles: [];
     starships: [];

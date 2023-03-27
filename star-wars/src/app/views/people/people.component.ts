@@ -27,7 +27,9 @@ export class PeopleComponent implements OnInit {
   dataPeople!: IPeopleService;
   dataSource!: IPeople[];
   planetId!: any;
+  movies!: any;
   movieId!: any;
+  dataSourceMovies!: any;
   constructor(
     public starwarsService: StarWarsService
     ){
@@ -42,8 +44,6 @@ export class PeopleComponent implements OnInit {
           this.starwarsService.getPlanet(this.planetId).subscribe((dataPlanet : IPlanet)=>{
             this.dataSource[i].homeworld = dataPlanet.name;
           });
-          
-
         }
         
     });

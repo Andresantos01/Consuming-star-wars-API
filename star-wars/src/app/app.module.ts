@@ -16,6 +16,8 @@ import { SpeciesComponent } from './views/species/species.component';
 import { VehiclesComponent } from './views/vehicles/vehicles.component';
 import { StarshipsComponent } from './views/starships/starships.component';
 import {MatTableModule} from '@angular/material/table';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +29,8 @@ import {MatTableModule} from '@angular/material/table';
     FilmsComponent,
     SpeciesComponent,
     VehiclesComponent,
-    StarshipsComponent
+    StarshipsComponent,
+   
   ],
   imports: [
     BrowserModule,
@@ -36,6 +39,7 @@ import {MatTableModule} from '@angular/material/table';
     MatButtonModule,
     AppRoutingModule,
     MatTableModule,
+    MatProgressSpinnerModule,
     HttpClientModule,
 
   ],
