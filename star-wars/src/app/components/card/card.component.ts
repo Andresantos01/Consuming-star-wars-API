@@ -9,7 +9,7 @@ export class CardComponent implements OnInit{
     @Input()
     category!:String;
     @Input()
-    linkTo!: String;
+    linkRoutes!: String;
     @Input()
     starWarsApi!: String;
    

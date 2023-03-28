@@ -11,7 +11,6 @@ import { StarWarsService } from 'src/app/services/starwars.service';
 
 
 export class HomeComponent implements OnInit {
-
   dataStarWars!: IStarWars;
   constructor(
     public starwarsService: StarWarsService
@@ -21,5 +20,5 @@ export class HomeComponent implements OnInit {
     })
   }
 
-  ngOnInit() :void {}  
+  ngOnInit( ) :void {}  
 }

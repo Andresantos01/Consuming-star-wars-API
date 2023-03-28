@@ -9,8 +9,8 @@ import { StarshipsComponent } from './views/starships/starships.component';
 import { VehiclesComponent } from './views/vehicles/vehicles.component';
 
 const routes: Routes = [
-  {path: '',component: HomeComponent},
-  {path: 'people',component: PeopleComponent},
+  {path: '', component: HomeComponent},
+  {path: 'people', component: PeopleComponent},
   {path: 'planets', component: PlanetsComponent},
   {path: 'films', component: FilmsComponent},
   {path: 'species',component: SpeciesComponent},
