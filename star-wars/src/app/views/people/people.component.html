@@ -1,59 +1,15 @@
 <app-header content="STAR WARS PEOPLE"></app-header>
-<div class="demo-button-container">
-  
-  <table mat-table #table [dataSource]="dataSource" class="mat-elevation-z8 demo-table">
-    <!-- Position Column -->
-    <ng-container matColumnDef="name">
-      <th class="text-gray-100 text uppercase " mat-header-cell *matHeaderCellDef>Name</th>
-      <td class="text-cyan-400" mat-cell *matCellDef="let element">{{element.name}}</td>
-    </ng-container>
-  
-    <!-- Name Column -->
-    <ng-container matColumnDef="height">
-      <th class="text-gray-100 text uppercase " mat-header-cell *matHeaderCellDef>height</th>
-      <td class="text-cyan-400" mat-cell *matCellDef="let element">{{element.height}}</td>
-    </ng-container>
-  
-    <!-- Weight Column -->
-    <ng-container matColumnDef="mass">
-      <th class="text-gray-100 text uppercase " mat-header-cell *matHeaderCellDef>mass</th>
-      <td class="text-cyan-400" mat-cell *matCellDef="let element">{{element.mass}}</td>
-    </ng-container>
-  
-    <!-- Symbol Column -->
-    <ng-container matColumnDef="hair_color">
-      <th class="text-gray-100 text uppercase " mat-header-cell *matHeaderCellDef>hair_color</th>
-      <td class="text-cyan-400" mat-cell *matCellDef="let element">{{element.hair_color}}</td>
-    </ng-container>
-     <!-- Actions Column -->
+<div class="container mx-auto grid gap-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1" >
+  <div class="hover:bg-rose-800 mx-auto w-3/5 p-4 bg-rose-600 flex flex-col justify-center items-center rounded-md" *ngFor="let dataStarWars of dataSource">
+    <h1 class="text-white font-semibold">Name: {{dataStarWars.name}}</h1>
+    <h3 class="text-white font-semibold">Height: {{dataStarWars.height}}</h3>
+    <h3 class="text-white font-semibold">Mass: {{dataStarWars.mass}}</h3>
+    <h3 class="text-white font-semibold">Hair_color: {{dataStarWars.hair_color}}</h3>
+    <h3 class="text-white font-semibold">Skin_color: {{dataStarWars.skin_color}}</h3>
+    <h3 class="text-white font-semibold">Eye_color: {{dataStarWars.eye_color}}</h3>
+    <h3 class="text-white font-semibold">Birth_year: {{dataStarWars.birth_year}}</h3>
+    <h3 class="text-white font-semibold">Gender: {{dataStarWars.gender}}</h3>
+    <h3 class="text-white font-semibold">Homeworld: {{dataStarWars.homeworld}}</h3>
+  </div>
+</div>
 
-     <ng-container matColumnDef="skin_color">
-        <th class="text-gray-100 text uppercase " mat-header-cell *matHeaderCellDef>skin_color</th>
-        <td class="text-cyan-400" mat-cell *matCellDef="let element">{{element.skin_color}}</td>
-      </ng-container>
-       <!-- Actions Column -->
-       <ng-container matColumnDef="eye_color">
-        <th class="text-gray-100 text uppercase " mat-header-cell *matHeaderCellDef>eye_color</th>
-        <td class="text-cyan-400" mat-cell *matCellDef="let element">{{element.eye_color}}</td>
-      </ng-container>
-       <!-- Actions Column -->
-       <ng-container matColumnDef="birth_year">
-        <th class="text-gray-100 text uppercase " mat-header-cell *matHeaderCellDef>birth_year</th>
-        <td class="text-cyan-400" mat-cell *matCellDef="let element">{{element.birth_year}}</td>
-      </ng-container>
-       <!-- Actions Column -->
-       <ng-container matColumnDef="gender">
-        <th class="text-gray-100 text uppercase " mat-header-cell *matHeaderCellDef>gender</th>
-        <td class="text-cyan-400" mat-cell *matCellDef="let element">{{element.gender}}</td>
-      </ng-container>
-       <!-- Actions Column -->
-       <ng-container matColumnDef="homeworld">
-        <th class="text-gray-100 text uppercase " mat-header-cell *matHeaderCellDef>homeworld</th>
-        <td class="text-cyan-400" mat-cell *matCellDef="let  element">{{element.homeworld}}</td>
-      </ng-container>
-    
-    
-    <tr mat-header-row *matHeaderRowDef="headerColumnsPeople"></tr>
-    <tr mat-row *matRowDef="let row; columns: headerColumnsPeople;"></tr>
-  </table>
-  
