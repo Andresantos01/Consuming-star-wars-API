@@ -1,4 +1,4 @@
-export interface IPeopleService{
+export interface IServiceApi{
     count: Number;
     next: String;
     previous: null;
