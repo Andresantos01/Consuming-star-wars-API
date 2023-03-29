@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
 import { IMovie } from '../models/IMovie';
-import { IPeopleService } from '../models/IPeopleService';
+import { IServiceApi } from '../models/IPeopleService';
 import { IPlanet } from '../models/IPlanet';
 import { IStarWars } from '../models/IStarWars';
 
@@ -13,18 +13,22 @@ export class StarWarsService {
     elementApiUrl = 'https://swapi.dev/api/';
     
     getRoutes(): Observable<IStarWars>{
-        return this.http.get<IStarWars>(this.elementApiUrl)
+        return this.http.get<IStarWars>(this.elementApiUrl);
     }
 
-    listAllPeople(): Observable<IPeopleService>{
-        return this.http.get<IPeopleService>(this.elementApiUrl + 'people')
+    listAllPeople(): Observable<IServiceApi>{
+        return this.http.get<IServiceApi>(this.elementApiUrl + 'people');
     }
 
     getPlanet(planetId: Number) : Observable<IPlanet>{
-        return this.http.get<IPlanet>(this.elementApiUrl + 'planets/' + planetId)
+        return this.http.get<IPlanet>(this.elementApiUrl + 'planets/' + planetId);
     }
 
-    getFilm(movieId: Number) : Observable<IMovie>{
-        return this.http.get<IMovie>(this.elementApiUrl + 'films/' + movieId)
+    getPlanets() : Observable<IServiceApi>{
+        return this.http.get<IServiceApi>(this.elementApiUrl + 'planets' );
+    }
+
+    getMovies() : Observable<IPlanet[]>{
+        return this.http.get<IPlanet[]>(this.elementApiUrl + 'films');
     }
 }
