@@ -44,6 +44,8 @@ export class PeopleComponent implements OnInit {
           this.starwarsService.getPlanet(this.planetId).subscribe((dataPlanet : IPlanet)=>{
             this.dataSource[i].homeworld = dataPlanet.name;
           });
+
+
         }
         
     });
