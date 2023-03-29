@@ -1,5 +1,5 @@
 <app-header content="WELCOME TO THE STAR WARS API"></app-header>
-<div class="container mx-auto gap-5 grid grid-cols-3 grid-rows-2 " *ngIf="dataStarWars">
+<div class="container mx-auto gap-5 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1" *ngIf="dataStarWars">
   <app-card class="bg-rose-600" linkRoutes="people" starWarsApi="{{dataStarWars.people}}" category="People"></app-card>
   <app-card class="bg-lime-600" linkRoutes="planets" starWarsApi="{{dataStarWars.planets}}" category="Planets"></app-card>
   <app-card class="bg-orange-600" linkRoutes="films" starWarsApi="{{dataStarWars.films}}" category="Films"></app-card>
