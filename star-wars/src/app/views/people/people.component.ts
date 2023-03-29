@@ -1,5 +1,5 @@
 import { Component, OnInit,ViewChild } from '@angular/core';
-import { IPeopleService } from 'src/app/models/IPeopleService';
+import { IServiceApi } from 'src/app/models/IPeopleService';
 import { StarWarsService } from 'src/app/services/starwars.service';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
@@ -20,11 +20,7 @@ import { IMovie } from 'src/app/models/IMovie';
 
 export class PeopleComponent implements OnInit {
 
-  @ViewChild(MatTable)
-  table !: MatTable <any>
-  headerColumnsPeople: string[] = ['name', 'height', 'mass', 'hair_color', 'skin_color', 'eye_color', 'birth_year','gender', 'homeworld']
-
-  dataPeople!: IPeopleService;
+  dataPeople!: IServiceApi;
   dataSource!: IPeople[];
   planetId!: any;
   movies!: any;
@@ -33,7 +29,7 @@ export class PeopleComponent implements OnInit {
   constructor(
     public starwarsService: StarWarsService
     ){
-      this.starwarsService.listAllPeople().subscribe((data: IPeopleService)=>{
+      this.starwarsService.listAllPeople().subscribe((data: IServiceApi)=>{
         this.dataPeople = data;
         this.dataSource = data.results;
 
@@ -45,7 +41,7 @@ export class PeopleComponent implements OnInit {
             this.dataSource[i].homeworld = dataPlanet.name;
           });
 
-
+         
         }
         
     });
