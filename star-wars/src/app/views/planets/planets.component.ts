@@ -17,7 +17,6 @@ export class PlanetsComponent implements OnInit  {
   ){
     this.starwarsService.getPlanets().subscribe((data : IServiceApi) => {
       this.dataSourcePlanet = data.results;
-      console.log(data);
     })
   }
   ngOnInit() {}
