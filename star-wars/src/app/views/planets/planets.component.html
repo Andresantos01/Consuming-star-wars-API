@@ -1,6 +1,6 @@
 <app-header content="PLANETS STAR WARS"></app-header>
 <div class="container mx-auto grid gap-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1" >
-    <div class="hover:bg-lime-800 hover:rounded-md mx-auto w-72 p-8 rounded-full capitalize bg-lime-600 flex flex-col justify-center items-center " *ngFor="let dataPlanet of dataSourcePlanet">
+    <div class="transition delay-150 duration-150 ease-in-out hover:bg-lime-800 mx-auto w-72 p-8  rounded-full capitalize bg-lime-600 flex flex-col justify-center items-center " *ngFor="let dataPlanet of dataSourcePlanet">
       <h1 class="text-white font-semibold">Name: {{dataPlanet.name}}</h1>
       <h3 class="text-white font-semibold">rotation_period: {{dataPlanet.rotation_period}}</h3>
       <h3 class="text-white font-semibold">orbital_period: {{dataPlanet.orbital_period}}</h3>
